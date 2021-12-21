@@ -1,0 +1,53 @@
+.chat_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & .chat_content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 20px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+
+        & .message_for_me {
+            display: flex;
+
+            & .message {
+                & p {
+                    padding: 0;
+                    margin: 0;
+                }
+
+                & .message_time {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        & .message_my {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            & .message {
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
+                background-color: rgba($color: #000000, $alpha: 0.1);
+                padding: 10px;
+                border-radius: 3px;
+
+                & p {
+                    padding: 0;
+                    margin: 0;
+                }
+
+                & .message_time {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
