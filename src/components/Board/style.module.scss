@@ -1,0 +1,76 @@
+.boardContainer {
+    left: 0px;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    & button {
+        position: absolute;
+        top: 0px;
+        left: 98%;
+    }
+}
+
+.webcam {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    height: 200px;
+    background-color: rgba($color: #000000, $alpha: 0.85);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgba($color: #727272, $alpha: 1);
+    box-shadow: 0px 0px 10px black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & div {
+        height: 150px;
+        width: 150px;
+        border-width: 3px;
+        border-style: solid;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+        border-color: rgba($color: #727272, $alpha: 1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+        animation: pulse 1.5s infinite;
+    }
+
+    & .exit_button {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+    }
+    
+    & .webcam_mic {
+        position: absolute;
+        bottom: 7.5px;
+        right: 40px;
+    }
+}
+
+@keyframes pulse {
+    70% {
+        box-shadow: 0 0 0 14px rgba(255, 255, 255, 0.1);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    }
+}
